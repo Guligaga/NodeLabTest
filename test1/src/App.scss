@@ -1,8 +1,17 @@
 .App {
+    margin: 0px auto;
+    max-width: 1000px;
+    &__title {
+        text-align: center;
+    }
 
-    &__title {}
+    &__date {
+        text-align: center;
+    }
 
-    &__date {}
-
-    &__table {}
+    &__table {
+        list-style: none;
+        max-width: 60%;
+        margin: 0px auto;
+    }
 }

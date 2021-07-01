@@ -1,6 +1,7 @@
 import './App.scss';
 import TableRow from './TableRow/TableRow';
 import TableHeader from './TableRow/TableHeader';
+import setDate from './utils/setDate';
 
 const currencies = [
   {
@@ -34,7 +35,7 @@ function App() {
   return (
     <main className="App">
       <h1 className="App__title">Course of Belarusian Ruble</h1>
-      <h2 className="App__date">{new Date().toLocaleDateString()}</h2>
+      <h2 className="App__date">{setDate()}</h2>
       <ul className="App__table">
         <TableHeader/>
         {
