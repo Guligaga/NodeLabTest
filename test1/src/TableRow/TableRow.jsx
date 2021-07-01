@@ -3,13 +3,12 @@ import React from 'react';
 import './TableRow.scss';
 
 export default function TableRow(props) {
-    const {code, name, value } = props.data;
-    const classList = ['TableRow', props.className ? props.className : ''];
+    const {abbreviation, name, rubToCurrency, currencyToRub } = props.data;
     return (
-        <li className={classList.join(' ')}>
-            <div className="TableRow__name">{name}</div>
-            <div className="TableRow__code">{code}</div>
-            <div className="TableRow__value">{value}</div>
+        <li className="TableRow">
+            <div className="TableRow__item">{name}</div>
+            <div className="TableRow__item">1 BYN = {rubToCurrency} {abbreviation}</div>
+            <div className="TableRow__item">1 {abbreviation} = {currencyToRub} BYN</div>
         </li>
     )
 }
