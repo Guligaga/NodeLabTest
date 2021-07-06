@@ -25,7 +25,7 @@ function getRoad(maze, position, direction) {
             }
             const roadUpd = getRoad(maze, positionUpd, dir.name);
             if(roadUpd) {
-                res = dir.name !== direction ? [dir.name].concat(roadUpd) : roadUpd;
+                res = [dir.name].concat(roadUpd);
             }
         })
         return res;
